@@ -1,0 +1,62 @@
+//kilometerToMeter
+function kilometerToMeter(km) {
+    if (km > 0) {
+        var meter = km * 1000;
+        return meter;
+    }
+    else{
+        return 'invalid input';
+    }
+}
+
+
+//budgetCalculator
+function budgetCalculator(watch, mobile, laptop) {
+
+    var watchCost = watch * 50;
+    var mobileCost = mobile * 100;
+    var laptopCost = laptop * 500;
+    var totalCost = watchCost + mobileCost + laptopCost;
+    return totalCost;
+}
+
+
+//hotelCost
+function hotelCost(days) {
+    var cost = 0;
+
+   if(days > 0){
+    if (days <= 10) {
+        cost = days * 100;
+    }
+    else if (days <= 20) {
+        var firstCost = 10 * 100;
+        var remainingDay = days - 10;
+        var secondCost = remainingDay * 80;
+        cost = firstCost + secondCost;
+    }
+    else {
+        var firstCost = 10 * 100;
+        var secondCost = 10 * 80;
+        var remainingDay = days - 20;
+        var thirdCost = remainingDay * 50;
+        cost = firstCost + secondCost + thirdCost;
+    }
+    return cost;
+   }
+   else{
+       return 'invalid input'
+   }
+}
+
+//megaFriends
+var friends = ['borhan', 'imu', 'prodeep', 'rudrosengupto', 'dottomitaly', 'shannel', 'mijailllam', 'alauddin']
+var maxWord = '';
+function megaFriend(friends){
+  for(var i = 0; i < friends.length; i++){
+    if(friends[i].length > maxWord.length){
+      maxWord = friends[i] ;        
+    }
+  } 
+  return maxWord;   
+} 
